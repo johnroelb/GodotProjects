@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Dead.mp3-ae69e7fe10bd9a832464498da5e130a7.mp3str"
+
+[deps]
+
+source_file="res://GodotPlatformerAssets/Audio/Dead.mp3"
+dest_files=[ "res://.import/Dead.mp3-ae69e7fe10bd9a832464498da5e130a7.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

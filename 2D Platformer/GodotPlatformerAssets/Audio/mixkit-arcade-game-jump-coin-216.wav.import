@@ -1,0 +1,23 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/mixkit-arcade-game-jump-coin-216.wav-35c9889c9570b4f07b5f6350aae6c6b0.sample"
+
+[deps]
+
+source_file="res://GodotPlatformerAssets/Audio/mixkit-arcade-game-jump-coin-216.wav"
+dest_files=[ "res://.import/mixkit-arcade-game-jump-coin-216.wav-35c9889c9570b4f07b5f6350aae6c6b0.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

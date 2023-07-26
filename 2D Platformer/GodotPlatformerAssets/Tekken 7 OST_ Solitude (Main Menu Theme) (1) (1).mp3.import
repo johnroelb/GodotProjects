@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Tekken 7 OST_ Solitude (Main Menu Theme) (1) (1).mp3-aa4f6f71219fe819fe42ef3bccbccd88.mp3str"
+
+[deps]
+
+source_file="res://GodotPlatformerAssets/Tekken 7 OST_ Solitude (Main Menu Theme) (1) (1).mp3"
+dest_files=[ "res://.import/Tekken 7 OST_ Solitude (Main Menu Theme) (1) (1).mp3-aa4f6f71219fe819fe42ef3bccbccd88.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,96 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Scenes/Button.gd" type="Script" id=1]
+[ext_resource path="res://GodotPlatformerAssets/Font/new_dynamicfont.tres" type="DynamicFont" id=2]
+[ext_resource path="res://GodotPlatformerAssets/Audio/Start.wav" type="AudioStream" id=3]
+[ext_resource path="res://GodotPlatformerAssets/Audio/Tekken 7 OST_ Solitude (Main Menu Theme) (1) (1).wav" type="AudioStream" id=4]
+[ext_resource path="res://GodotPlatformerAssets/background0.png" type="Texture" id=5]
+[ext_resource path="res://GodotPlatformerAssets/Sprites/spritesheet.png" type="Texture" id=6]
+[ext_resource path="res://Scenes/Button2.gd" type="Script" id=7]
+
+[node name="Control" type="Control"]
+margin_left = 13.0
+margin_top = -149.0
+margin_right = 1037.0
+margin_bottom = 455.0
+
+[node name="Win" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+volume_db = -10.0
+autoplay = true
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = -13.0
+margin_top = 148.0
+margin_right = 1542.0
+margin_bottom = 1026.0
+color = Color( 0, 1, 0.788235, 1 )
+
+[node name="Background0" type="Sprite" parent="ColorRect"]
+position = Vector2( 884, 442 )
+texture = ExtResource( 5 )
+
+[node name="Spritesheet" type="Sprite" parent="ColorRect/Background0"]
+position = Vector2( -285, 28 )
+texture = ExtResource( 6 )
+hframes = 4
+
+[node name="Spritesheet2" type="Sprite" parent="ColorRect/Background0"]
+position = Vector2( -286, -91 )
+texture = ExtResource( 6 )
+hframes = 4
+frame = 1
+
+[node name="Spritesheet3" type="Sprite" parent="ColorRect/Background0"]
+position = Vector2( 138, -91 )
+texture = ExtResource( 6 )
+hframes = 4
+frame = 2
+
+[node name="Spritesheet4" type="Sprite" parent="ColorRect/Background0"]
+position = Vector2( 142, 25 )
+texture = ExtResource( 6 )
+hframes = 4
+frame = 3
+
+[node name="Button" type="Button" parent="ColorRect"]
+margin_left = 647.0
+margin_top = 300.0
+margin_right = 971.0
+margin_bottom = 410.0
+custom_colors/font_color_disabled = Color( 1, 0.0313726, 0.0313726, 1 )
+custom_colors/font_color_focus = Color( 1, 0.137255, 0.137255, 1 )
+custom_fonts/font = ExtResource( 2 )
+text = "PLAY AGAIN?"
+script = ExtResource( 1 )
+
+[node name="Start" type="AudioStreamPlayer" parent="ColorRect/Button"]
+stream = ExtResource( 3 )
+
+[node name="Label" type="Label" parent="ColorRect/Button"]
+modulate = Color( 0.129412, 0.494118, 0.192157, 1 )
+margin_left = 40.0
+margin_top = -52.0
+margin_right = 176.0
+margin_bottom = -13.0
+rect_scale = Vector2( 1.887, 1.888 )
+custom_fonts/font = ExtResource( 2 )
+text = "YOU WIN!!!"
+
+[node name="Button2" type="Button" parent="ColorRect"]
+margin_left = 650.0
+margin_top = 422.0
+margin_right = 974.0
+margin_bottom = 520.0
+custom_colors/font_color_disabled = Color( 1, 0.0313726, 0.0313726, 1 )
+custom_colors/font_color_focus = Color( 1, 0.137255, 0.137255, 1 )
+custom_fonts/font = ExtResource( 2 )
+text = "RETURN TO TITLE SCREEN"
+icon_align = 1
+script = ExtResource( 7 )
+
+[node name="Start" type="AudioStreamPlayer" parent="ColorRect/Button2"]
+stream = ExtResource( 3 )
+
+[connection signal="pressed" from="ColorRect/Button" to="ColorRect/Button" method="_on_Button_pressed"]
+[connection signal="pressed" from="ColorRect/Button2" to="ColorRect/Button2" method="_on_Button_pressed"]

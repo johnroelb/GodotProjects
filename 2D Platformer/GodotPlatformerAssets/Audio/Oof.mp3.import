@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Oof.mp3-ec31d1563b899b83e5838c65220b9b8f.mp3str"
+
+[deps]
+
+source_file="res://GodotPlatformerAssets/Audio/Oof.mp3"
+dest_files=[ "res://.import/Oof.mp3-ec31d1563b899b83e5838c65220b9b8f.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
