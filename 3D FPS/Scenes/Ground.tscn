@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=2]
+
+[sub_resource type="PlaneMesh" id=1]
+
+[sub_resource type="PlaneShape" id=2]
+
+[node name="MeshInstance" type="MeshInstance"]
+transform = Transform( 8.70958, 0, 0, 0, 50.6875, 0, 0, 0, 8.2987, 0, 0, 0 )
+mesh = SubResource( 1 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 4.78466, 0, 0, 0, 0.00599185, 0, 0, 0, 4.86567, 0, 0, 0 )
+shape = SubResource( 2 )

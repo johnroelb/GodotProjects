@@ -1,0 +1,159 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Scenes/Obstacle.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/Ground.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://ammo_pickup/ammo_pickup.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Reset.tscn" type="PackedScene" id=5]
+
+[sub_resource type="ConcavePolygonShape" id=1]
+data = PoolVector3Array( 1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, 1, -1, 0, -1, 1, 0, -1 )
+
+[node name="MainScene" type="Spatial"]
+
+[node name="MeshInstance" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.467091, -0.581717, 2.5701 )
+
+[node name="MeshInstance6" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.66481, -0.581717, 5.13761 )
+
+[node name="MeshInstance2" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.537958, 0, 0, 0, 1, 0, 0, 0, 0.508356, -3.49739, -0.3943, 1.46791 )
+
+[node name="MeshInstance3" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.863103, 0, 0, 0, 0.846216, 0, 0, 0, 0.82926, -4.76276, -0.563413, -0.553435 )
+skeleton = NodePath("../MeshInstance2")
+
+[node name="MeshInstance4" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.70963, 0, 0, 0, 0.590463, 0, 0, 0, 0.70963, -2.80644, -0.811844, -2.60131 )
+skeleton = NodePath("../MeshInstance")
+
+[node name="MeshInstance7" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.70963, 0, 0, 0, 0.590463, 0, 0, 0, 0.70963, 5.33401, 1.66767, 3.22148 )
+skeleton = NodePath("../MeshInstance")
+
+[node name="MeshInstance8" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.70963, 0, 0, 0, 0.590463, 0, 0, 0, 0.70963, 7.77112, 3.4668, 0.204144 )
+skeleton = NodePath("../MeshInstance")
+
+[node name="MeshInstance9" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.70963, 0, 0, 0, 0.590463, 0, 0, 0, 0.70963, 7.77112, 4.954, -3.84481 )
+skeleton = NodePath("../MeshInstance")
+
+[node name="MeshInstance10" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.70963, 0, 0, 0, 0.590463, 0, 0, 0, 0.70963, 7.77112, 6.95831, -8.68672 )
+skeleton = NodePath("../MeshInstance")
+
+[node name="MeshInstance11" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.70963, 0, 0, 0, 0.590463, 0, 0, 0, 0.70963, 7.77112, 8.75431, -13.2732 )
+skeleton = NodePath("../MeshInstance")
+
+[node name="MeshInstance12" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.70963, 0, 0, 0, 0.590463, 0, 0, 0, 0.70963, 3.95014, 10.0167, -13.5925 )
+skeleton = NodePath("../MeshInstance")
+
+[node name="MeshInstance13" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.70963, 0, 0, 0, 0.590463, 0, 0, 0, 0.70963, 0.185001, 11.5835, -13.5925 )
+skeleton = NodePath("../MeshInstance")
+
+[node name="MeshInstance14" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.70963, 0, 0, 0, 0.590463, 0, 0, 0, 0.70963, -2.86462, 13.4814, -13.5925 )
+skeleton = NodePath("../MeshInstance")
+
+[node name="MeshInstance15" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.70963, 0, 0, 0, 0.590463, 0, 0, 0, 0.70963, -10.5769, 11.141, -13.5925 )
+skeleton = NodePath("../MeshInstance")
+
+[node name="MeshInstance16" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.70963, 0, 0, 0, 0.590463, 0, 0, 0, 0.70963, -19.417, 12.074, -10.0011 )
+skeleton = NodePath("../MeshInstance")
+
+[node name="MeshInstance17" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.70963, 0, 0, 0, 0.590463, 0, 0, 0, 0.70963, -17.8647, 13.124, -15.9378 )
+skeleton = NodePath("../MeshInstance")
+
+[node name="MeshInstance18" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.70963, 0, 0, 0, 0.590463, 0, 0, 0, 0.70963, -11.2182, 13.124, -20.9175 )
+skeleton = NodePath("../MeshInstance")
+
+[node name="MeshInstance19" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.70963, 0, 0, 0, 0.590463, 0, 0, 0, 0.70963, -20.587, 13.124, -4.88263 )
+skeleton = NodePath("../MeshInstance")
+
+[node name="MeshInstance20" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.70963, 0, 0, 0, 0.590463, 0, 0, 0, 0.70963, -15.3513, 10.4766, -10.3936 )
+skeleton = NodePath("../MeshInstance")
+
+[node name="MeshInstance21" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.70963, 0, 0, 0, 0.590463, 0, 0, 0, 0.70963, -15.3513, 10.4766, 0.606363 )
+skeleton = NodePath("../MeshInstance")
+
+[node name="MeshInstance22" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.70963, 0, 0, 0, 0.590463, 0, 0, 0, 0.70963, -20.564, 14.9291, 0.606363 )
+skeleton = NodePath("../MeshInstance")
+
+[node name="MeshInstance23" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.70963, 0, 0, 0, 0.590463, 0, 0, 0, 0.70963, -16.4883, 14.9291, 5.53145 )
+skeleton = NodePath("../MeshInstance")
+
+[node name="MeshInstance24" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.70963, 0, 0, 0, 0.590463, 0, 0, 0, 0.70963, -3.28162, 14.9291, 5.53145 )
+skeleton = NodePath("../MeshInstance")
+
+[node name="MeshInstance25" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.70963, 0, 0, 0, 0.590463, 0, 0, 0, 0.70963, -3.28162, 14.9291, 9.54485 )
+skeleton = NodePath("../MeshInstance")
+
+[node name="MeshInstance26" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.70963, 0, 0, 0, 0.590463, 0, 0, 0, 0.70963, -3.28162, 16.9512, 14.9958 )
+skeleton = NodePath("../MeshInstance")
+
+[node name="MeshInstance29" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.70963, 0, 0, 0, 0.590463, 0, 0, 0, 0.70963, 4.81671, 14.3093, 10.3363 )
+skeleton = NodePath("../MeshInstance")
+
+[node name="MeshInstance30" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.70963, 0, 0, 0, 0.590463, 0, 0, 0, 0.70963, -0.665517, 14.3093, -3.38272 )
+skeleton = NodePath("../MeshInstance")
+
+[node name="MeshInstance31" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.70963, 0, 0, 0, 0.590463, 0, 0, 0, 0.70963, 3.78134, 12.8004, 1.73445 )
+skeleton = NodePath("../MeshInstance")
+
+[node name="MeshInstance32" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.70963, 0, 0, 0, 0.590463, 0, 0, 0, 0.70963, -6.6443, 12.8004, -8.64255 )
+skeleton = NodePath("../MeshInstance")
+
+[node name="MeshInstance27" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.70963, 0, 0, 0, 0.590463, 0, 0, 0, 0.70963, -9.1852, 13.7622, 4.09474 )
+skeleton = NodePath("../MeshInstance")
+
+[node name="MeshInstance28" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.70963, 0, 0, 0, 0.590463, 0, 0, 0, 0.70963, -12.31, 13.8148, 9.1673 )
+skeleton = NodePath("../MeshInstance")
+
+[node name="Player" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 0.605739, 0, 0, 0, 1, -4.80079, 1.54889, -0.140703 )
+
+[node name="MeshInstance5" parent="." instance=ExtResource( 2 )]
+transform = Transform( 8.70958, 0, 0, 0, 50.6875, 0, 0, 0, 8.2987, 0.865841, -1.36, 2.27104 )
+
+[node name="StaticBody" type="StaticBody" parent="MeshInstance5"]
+
+[node name="CollisionShape" type="CollisionShape" parent="MeshInstance5/StaticBody"]
+shape = SubResource( 1 )
+
+[node name="AmmoPickup" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.02223, -0.903953, -1.95617 )
+
+[node name="AmmoPickup2" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.77964, 0.71418, 5.49428 )
+
+[node name="AmmoPickup3" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.472288, 0.71418, 2.56495 )
+
+[node name="AmmoPickup4" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.44854, -0.934461, 9.13069 )
+
+[node name="Area" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.50623, -15.8604, 4.2558 )

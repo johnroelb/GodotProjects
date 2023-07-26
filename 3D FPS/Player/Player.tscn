@@ -1,0 +1,73 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://default_env.tres" type="Environment" id=1]
+[ext_resource path="res://Player/Player.gd" type="Script" id=2]
+[ext_resource path="res://Weapons/Armed/Rifle/Rifle.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Weapons/Armed/Pistol/Pistol.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Weapons/Unarmed/Unarmed.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Weapons/weapon_manager.gd" type="Script" id=6]
+[ext_resource path="res://ui/hud/HUD.tscn" type="PackedScene" id=7]
+
+[sub_resource type="CapsuleShape" id=1]
+radius = 0.5
+height = 1.5
+
+[sub_resource type="CapsuleMesh" id=3]
+radius = 0.5
+mid_height = 1.5
+
+[sub_resource type="CubeMesh" id=2]
+
+[node name="Player" type="KinematicBody"]
+script = ExtResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 1.25, 0 )
+shape = SubResource( 1 )
+
+[node name="Body" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 1.25, 0 )
+mesh = SubResource( 3 )
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.25, 0 )
+environment = ExtResource( 1 )
+current = true
+
+[node name="LeftHand" type="MeshInstance" parent="Camera"]
+transform = Transform( 0.130837, 0, 0, 0, 0.114895, 0, 0, 0, 0.49424, -0.457, -0.438, -0.562 )
+mesh = SubResource( 2 )
+skeleton = NodePath("../..")
+
+[node name="RightHand" type="MeshInstance" parent="Camera"]
+transform = Transform( 0.130837, 0, 0, 0, 0.114895, 0, 0, 0, 0.49424, 0.468, -0.438, -0.562 )
+mesh = SubResource( 2 )
+skeleton = NodePath("../..")
+
+[node name="Interaction" type="RayCast" parent="Camera"]
+enabled = true
+cast_to = Vector3( 0, 0, -5 )
+
+[node name="Hand" type="Position3D" parent="Camera"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00285763, -0.474939, -2.29736 )
+
+[node name="Shooting" type="RayCast" parent="Camera"]
+cast_to = Vector3( 0, 0, -100 )
+
+[node name="Weapons" type="Spatial" parent="Camera"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.25, 0 )
+script = ExtResource( 6 )
+
+[node name="Pistol" parent="Camera/Weapons" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1.49357, 0, 0, 0, 1.31269, 0.488059, 1.86637, -1.05105 )
+visible = false
+
+[node name="Rifle" parent="Camera/Weapons" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1.17566, 0, 0, 0, 1.42019, 0.471556, 1.9022, -1.03881 )
+visible = false
+
+[node name="Unarmed" parent="Camera/Weapons" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.46996, 0.943654, 0.173555 )
+visible = false
+
+[node name="HUD" parent="." instance=ExtResource( 7 )]
